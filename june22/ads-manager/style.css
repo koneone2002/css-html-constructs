@@ -19,8 +19,6 @@ body {
   background-color: #273349;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(12, 16, 31, 0.4);
-  padding: 100px;
-  margin: auto;
   width: 1000px;
 }
 table {
