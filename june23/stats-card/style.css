@@ -19,35 +19,34 @@ body {
   color: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 10px rgba(12, 16, 31, 0.4);
-  padding: 80px;
-  width: 1100px;
 }
 .card-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+
   align-items: center;
   justify-content: space-between;
-  padding: 30px 0;
-  width: 100%;
+  padding: 50px 80px;
+  width: 940px;
 }
-.card {
-  margin: 0 18px;
-  padding: 10px;
-}
+
 .card p {
   font-size: 18px;
   text-align: center;
   line-height: 1.5;
 }
-.header,
-.footer {
-  text-align: center;
-}
+
 h2 {
+  text-align: center;
   font-size: 22px;
-  margin: 0;
+  margin: 20px;
 }
 .card h1 {
   font-size: 50px;
+  text-align: center;
+}
+.footer {
   text-align: center;
 }
 .footer p {
@@ -59,6 +58,6 @@ h2 {
 }
 @media (max-width: 768px) {
   .card-container {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
 }
