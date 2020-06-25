@@ -80,18 +80,19 @@ body {
 }
 
 .card p {
+  color: rgba(255, 255, 255, 0.5);
   text-transform: uppercase;
   text-align: left;
   font-size: 14px;
 }
 
 .card:nth-child(1) {
-  border-bottom: 1px solid #fff;
-  border-right: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
 .card:nth-child(2) {
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
 }
 .card:nth-child(3) {
-  border-right: 1px solid #fff;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
 }
