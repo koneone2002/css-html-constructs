@@ -16,14 +16,20 @@ body {
 
 .container {
   color: #fff;
-  background: rgb(108,90,154);
-background: linear-gradient(48deg, rgba(108,90,154,1) 0%, rgba(108,90,154,1) 75%, rgba(157,145,184,1) 100%);
+  background: rgb(108, 90, 154);
+  background: linear-gradient(
+    48deg,
+    rgba(108, 90, 154, 1) 0%,
+    rgba(108, 90, 154, 1) 75%,
+    rgba(157, 145, 184, 1) 100%
+  );
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  width: 940px;
-  margin: auto;
+  gap: 100px;
+  width: 1100px;
   padding: 100px 50px;
 }
+
 .left-side {
   padding: 20px;
 }
@@ -36,34 +42,49 @@ background: linear-gradient(48deg, rgba(108,90,154,1) 0%, rgba(108,90,154,1) 75%
   margin-bottom: 40px;
 }
 .left-side .btn {
-  background-color: #8274A6; 
+  background-color: #8274a6;
   text-decoration: none;
   text-transform: uppercase;
   border: none;
-  width: 50%; 
+  padding: 20px 40px;
   color: #fff;
-  height: 20%;
-
+}
+.left-side .btn:hover {
+  opacity: 0.8;
 }
 .right-side {
+  padding: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
 }
+
 .card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 20px;
+  padding-top: 30px;
 }
+.card:nth-child(odd) {
+  align-items: flex-start;
+}
+
+.card:nth-child(even) {
+  align-items: flex-end;
+}
+
+.card h2 {
+  font-size: 55px;
+  letter-spacing: 4px;
+  margin: 0;
+  line-height: 1;
+}
+
 .card p {
   text-transform: uppercase;
   text-align: left;
+  font-size: 14px;
 }
-.card h2 {
-  text-align
-}
+
 .card:nth-child(1) {
   border-bottom: 1px solid #fff;
   border-right: 1px solid #fff;
