@@ -27,7 +27,7 @@ app.get('/', (req, res) =>
 );
 
 // Define Routes
-app.use('/api/todos', require('./routes/todos'));
+app.use('/api/todos', require('./routes/api'));
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);
