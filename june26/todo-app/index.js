@@ -1,25 +1,12 @@
 const express = require('express');
 const connectDB = require('./config/db');
-// require('dotenv').config();
-
 const app = express();
-// Connect to Database
+
+//Connect to Database
 connectDB();
 
-const port = process.env.PORT || 5010;
+app.use(express.json({ extended: false }));
 
-// app.use((req, res, next) => {
-//   res.header('Access-Control-Allow-Origin', '*');
-//   res.header(
-//     'Access-Control-Allow-Headers',
-//     'Origin, X-Requested-With, Content-Type, Accept'
-//   );
-//   next();
-// });
-
-// app.use((req, res, next) => {
-//   res.send('Welcome to Express');
-// });
 app.get('/', (req, res) =>
   res.json({
     msg: 'Welcome to the Todo API...'
@@ -27,8 +14,7 @@ app.get('/', (req, res) =>
 );
 
 // Define Routes
-app.use('/api/todos', require('./routes/api'));
+app.use('/api/todos', require('./routes/todos'));
 
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+const PORT = process.env.PORT || 5010;
+app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
